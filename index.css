@@ -369,34 +369,40 @@ display: flex;
 }
 
 .team-text {
-  /* background: var(--white);
-  padding: var(--space-sm);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  width: 100%; */
-  max-width: 200px;
+   max-width: 200px;
+  position: relative;
+  padding-left: var(--space-md); 
+ 
   /* position: relative; */
 }
 
 .team-text::before {
-  content: "";
+ content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  width: 5px;
+  left: calc(-0.5 * var(--space-sm)); /* Half of the gap to center the line */
   height: 100%;
+  width: 4px;
   background: var(--accent-yellow);
 }
 
 .team-text h2 {
   color: var(--primary-blue);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: var(--space-xs);
+
 }
+.team-text h3 {
+  color: var(--primary-blue);
+  font-size: 1.4rem;
+  margin-bottom: var(--space-xs);
+  
+}
+
 
 .team-text p {
   color: var(--text-color);
-  line-height: 1.4;
+  line-height: 1.9;
   font-size: 0.85rem;
 }
 
@@ -430,6 +436,8 @@ display: flex;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   gap: var(--space-sm);
+  align-items: start;
+  justify-items: center; /* Center cards in grid cells */
 }
 
 .team-card {
@@ -443,6 +451,11 @@ display: flex;
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--primary-blue);
+  width: fit-content; /* Makes width adjust to content */
+  min-width: 100px; /* Ensures minimum width */
+  max-width: 100%; /* Prevents overflow */
+  margin: 0 auto; /* Centers card in grid cell */
+  white-space: wrap; /* Prevents text wrapping (optional) */
 }
 
 .team-card:hover {
