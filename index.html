@@ -4,12 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Assa North Portal</title>
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    
+  </style>
 </head>
 
 <body>
   <aside class="navbar">
-    <img src="image/image.png" alt="Company Logo">
+    <img src="image/image.png" alt="Renaissance Energy Company Logo">
     <h2>Assa North Portal</h2>
     <div class="nav-menu">
       <div class="nav-item"><a href="#" class="nav-link">Home</a></div>
@@ -24,17 +27,28 @@
         </div>
       </div>
       <div class="nav-item"><a href="#" class="nav-link">Teams</a></div>
-      <div class="nav-item"><a href="#" class="nav-link">Reports</a></div>
+      <div class="nav-item has-submenu">
+        <a href="#" class="nav-link">Reports</a>
+        <div class="submenu">
+          <a href="#">IM&IT</a>
+          <a href="#">Project Services</a>
+          <a href="#">Project Execution Upstream & FLB</a>
+          <a href="#">Contracts & Procurement</a>
+          <a href="#">HSSE</a>
+          <a href="#">OR&A</a>
+        </div>
+      </div>
       <div class="nav-item"><a href="#" class="nav-link">Contact</a></div>
     </div>
   </aside>
 
   <div class="main">
     <div class="header-bar">
-      <h1 class="header-title">Welcome to Assa North Portal.....</h1>
+      <h1 class="header-title">Welcome to Assa North Portal</h1>
       <nav class="header-nav">
         <div class="header-nav-item"><a href="#" class="header-nav-link">Home</a></div>
-        <div class="header-nav-item">
+        
+        <div class="header-nav-item has-dropdown">
           <a href="#" class="header-nav-link">Documents</a>
           <div class="header-dropdown">
             <a href="#">Project Documents</a>
@@ -44,67 +58,131 @@
             <a href="#">Financial Reports</a>
           </div>
         </div>
+        
+        <div class="header-nav-item has-dropdown">
+          <a href="#" class="header-nav-link">Projects</a>
+          <div class="header-dropdown">
+            <a href="#">IM&IT</a>
+            <a href="#">Project Services</a>
+            <a href="#">Project Execution Upstream & FLB</a>
+            <a href="#">Contracts & Procurement</a>
+            <a href="#">HSSE</a>
+            <a href="#">OR&A</a>
+          </div>
+        </div>
+        
         <div class="header-nav-item"><a href="#" class="header-nav-link">Teams</a></div>
-        <div class="header-nav-item"><a href="#" class="header-nav-link">Reports</a></div>
         <div class="header-nav-item"><a href="#" class="header-nav-link">Contact</a></div>
       </nav>
+      <button class="mobile-menu-toggle">☰ Menu</button>
     </div>
 
-    <div class="slideshow-container">
-      <div class="slide"><img src="image/renback.png" alt="Oil Field Operations" /></div>
-      <div class="slide"><img src="image/site1.png" alt="Team Meeting" /></div>
-      <div class="slide"><img src="image/site2.png" alt="Project Site" /></div>
-       <div class="slide"><img src="image/site3.png" alt="Project Site" /></div>
-    </div>
-
-
-     <div class="info-section">
+    <div class="slideshow-container" aria-live="polite" aria-atomic="true">
+      <div class="slide active"><img src="image/renback.png" alt="Oil Field Operations" /></div>
+      <div class="slide"><img src="image/site1.png" alt="Team meeting at project site" /></div>
+      <div class="slide"><img src="image/site2.png" alt="Construction progress at Assa North" /></div>
+      <div class="slide"><img src="image/site3.png" alt="Project infrastructure overview" /></div>
       
-    <div class="second-row">
-      <img src="image/greg.png" alt="Background" class="background-img" />
-      <div class="overlay">
-        <div class="top-left-image">
-          <img src="image/greg.png" alt="Greg image" />
-        </div>
-        <div class="writeup-box">
-          <h2>Greg Ofovwe </h2>
-          <p>Greg brings over 24 years of experience in 
-            delivering complex oil and gas projects, holding diverse roles spanning 
-            discipline design engineering, installation, construction, asset support, 
-            technical and non-technical integration and interface management and leadership 
-            roles in project execution across both greenfield and brownfield project developments in Nigeria and Europe.!</p>
-        </div>
+      <div class="slideshow-controls">
+        <button class="prev-slide" aria-label="Previous slide">‹</button>
+        <button class="next-slide" aria-label="Next slide">›</button>
       </div>
     </div>
 
-    <div class="text-box">
-      <h2>Welcome to the Assa North Portal Project Teams</h2>
-      <p>This portal provides centralized access to all project documentation, team resources, and operational metrics for the Assa North development project.</p>
-      <p>Key features include:</p>
-      <ul>
-        <li>Access to project documents and reports</li>
-        <li>Team collaboration spaces</li>
-        <li>Real-time performance metrics</li>
-        <li>Announcements and updates</li>
-      </ul>
+  <!-- Rest of your existing HTML remains the same until the info-teams-container -->
+
+    <div class="info-teams-container">
+      <!-- Left container for image and text -->
+      <div class="team-content-container">
+        <div class="team-image">
+          <img src="image/greg.png" alt="Project manager Greg speaking with team" />
+        </div>
+        <div class="team-text">
+          <h2>Welcome to Assa North Portal</h2>
+          <p>This portal provides centralized access to all project documentation, team resources, and operational metrics for the Assa North development project.</p>
+        </div>
+      </div>
+   
+      <!-- Project Teams List -->
+      <div class="project-teams-container">
+  <h2 class="teams-title">PROJECT TEAMS</h2>
+  <div class="teams-grid">
+    <div class="team-card">
+      <h3>HSSE</h3>
     </div>
+    <div class="team-card">
+      <h3>IM</h3>
     </div>
+    <div class="team-card">
+      <h3>IT</h3>
+    </div>
+    <div class="team-card">
+      <h3>Project Execution</h3>
+    </div>
+    <div class="team-card">
+      <h3>Project Services</h3>
+    </div>
+    <div class="team-card">
+      <h3>Contracts & Procurement</h3>
+    </div>
+    <div class="team-card">
+      <h3>Operations</h3>
+    </div>
+    <div class="team-card">
+      <h3>Reliability</h3>
+    </div>
+    <div class="team-card">
+      <h3>Assurance</h3>
+    </div>
+    <div class="team-card">
+      <h3>Engineering</h3>
+    </div>
+    <div class="team-card">
+      <h3>Construction</h3>
+    </div>
+    <div class="team-card">
+      <h3>Commissioning</h3>
+    </div>
+  </div>
+</div>
+    </div>
+
 
     <div class="metrics-row">
-      <div class="metric" id="pie-chart">
+      <div class="metric" id="news-section">
         <h3>News & Meetings</h3>
-        <p>A reel or list of News from Yammer, Sharepoint or ther sources</p>
-        <p>Major upcoming ANOH, Greenfield Projects and Company Events</p>
+        <div class="news-feed">
+          <div class="news-item">
+            <h4>Quarterly Safety Review</h4>
+            <p>Next meeting: July 25, 2025</p>
+          </div>
+          <div class="news-item">
+            <h4>ANOH Project Update</h4>
+            <p>New milestones achieved in Phase 2</p>
+          </div>
+        </div>
       </div>
-      <div class="metric" id="cards-metric">
+      <div class="metric" id="achievements">
         <h3>Achievements</h3>
-        <p>Important operational indicators</p>
-        <div class="metric-placeholder">Metrics Cards Placeholder</div>
+        <div class="achievement-cards">
+          <div class="achievement-card">
+            <div class="achievement-badge">🏆</div>
+            <p>1 Million Safe Man-Hours</p>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-badge">⭐</div>
+            <p>Project Delivery Ahead of Schedule</p>
+          </div>
+        </div>
       </div>
-      <div class="metric" id="bar-chart">
-        <h3>Dashboard</h3>
-        <p>List of Dashboards clickable by users</p>
-        <div class="metric-placeholder">Bar Chart Placeholder</div>
+      <div class="metric" id="dashboards">
+        <h3>Dashboards</h3>
+        <ul class="dashboard-links">
+          <li><a href="#">Project Progress</a></li>
+          <li><a href="#">Safety Metrics</a></li>
+          <li><a href="#">Financial Overview</a></li>
+          <li><a href="#">Resource Allocation</a></li>
+        </ul>
       </div>
     </div>
 
@@ -112,44 +190,83 @@
       <h2>WE ARE RENAISSANCE</h2>
       <div class="secondary-slider">
         <div class="secondary-slide">
-          <img src="image/image.png" alt="Construction Progress" />
-          <div class="secondary-slide-caption">Construction Phase 1 Completed</div>
+          <img src="image/image.png" alt="Renaissance company logo" />
+          <div class="secondary-slide-caption">Our Corporate Identity</div>
         </div>
         <div class="secondary-slide">
-          <img src="image/site4.png" alt="Team Celebration" />
+          <img src="image/site4.png" alt="Team celebrating safety milestone" />
           <div class="secondary-slide-caption">Safety Milestone Celebration</div>
         </div>
         <div class="secondary-slide">
-          <img src="image/site5.png" alt="New Equipment" />
+          <img src="image/site5.png" alt="New equipment being installed" />
           <div class="secondary-slide-caption">New Equipment Installation</div>
         </div>
         <div class="secondary-slide">
-          <img src="image/site6.png" alt="Community Event" />
+          <img src="image/site6.png" alt="Community outreach event" />
           <div class="secondary-slide-caption">Community Outreach Program</div>
         </div>
       </div>
     </div>
 
     <footer>
-      <p>&copy; 2025 Renaissance Africa Energy Company Limited</p>
-      <p>Assa North Development Project</p>
+      <div class="footer-content">
+        <p>&copy; 2025 Renaissance Africa Energy Company Limited</p>
+        <p>Assa North Development Project</p>
+        <p class="contact-info">Contact: <a href="mailto:info@renenergy.com">info@renenergy.com</a></p>
+      </div>
     </footer>
   </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      // Slideshow functionality
       const slides = document.querySelectorAll('.slide');
       let currentSlide = 0;
-      slides[currentSlide].classList.add('active');
-
-      function nextSlide() {
-        slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add('active');
+      const slideCount = slides.length;
+      
+      function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
       }
-
-      setInterval(nextSlide, 6000);
-
+      
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slideCount;
+        showSlide(currentSlide);
+      }
+      
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+        showSlide(currentSlide);
+      }
+      
+      // Auto-advance slides
+      let slideInterval = setInterval(nextSlide, 6000);
+      
+      // Manual controls
+      document.querySelector('.next-slide').addEventListener('click', function() {
+        clearInterval(slideInterval);
+        nextSlide();
+        slideInterval = setInterval(nextSlide, 6000);
+      });
+      
+      document.querySelector('.prev-slide').addEventListener('click', function() {
+        clearInterval(slideInterval);
+        prevSlide();
+        slideInterval = setInterval(nextSlide, 6000);
+      });
+      
+      // Mobile menu toggle for sidebar
+      const mobileToggle = document.querySelector('.mobile-menu-toggle');
+      const navbar = document.querySelector('.navbar');
+      const navMenu = document.querySelector('.nav-menu');
+      const headerNav = document.querySelector('.header-nav');
+      
+      mobileToggle.addEventListener('click', function() {
+        navbar.classList.toggle('mobile-visible');
+        navMenu.classList.toggle('active');
+      });
+      
+      // Submenu functionality for mobile (sidebar)
       const hasSubmenus = document.querySelectorAll('.has-submenu');
       hasSubmenus.forEach(item => {
         const link = item.querySelector('.nav-link');
@@ -161,6 +278,86 @@
             submenu.classList.toggle('active');
           }
         });
+      });
+      
+      // Dropdown functionality for header nav
+      const hasDropdowns = document.querySelectorAll('.has-dropdown');
+      hasDropdowns.forEach(item => {
+        const link = item.querySelector('.header-nav-link');
+        
+        // Desktop hover
+        item.addEventListener('mouseenter', function() {
+          if (window.innerWidth > 768) {
+            item.classList.add('active');
+          }
+        });
+        
+        item.addEventListener('mouseleave', function() {
+          if (window.innerWidth > 768) {
+            item.classList.remove('active');
+          }
+        });
+        
+        // Mobile click
+        link.addEventListener('click', function(e) {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            item.classList.toggle('active');
+            
+            // Close other dropdowns
+            hasDropdowns.forEach(otherItem => {
+              if (otherItem !== item) {
+                otherItem.classList.remove('active');
+              }
+            });
+          }
+        });
+      });
+      
+      // Expandable team cards functionality
+      const teamCards = document.querySelectorAll('.team-card');
+      teamCards.forEach(card => {
+        const toggle = card.querySelector('.expand-toggle');
+        const links = card.querySelector('.team-links');
+        const items = links.querySelectorAll('li');
+        
+        // Only show toggle if there are more than 3 items
+        if (items.length <= 3) {
+          toggle.style.display = 'none';
+        }
+        
+        toggle.addEventListener('click', function() {
+          card.classList.toggle('expanded');
+          
+          // Update button text
+          if (card.classList.contains('expanded')) {
+            toggle.textContent = 'Show Less';
+          } else {
+            toggle.textContent = 'Show More';
+          }
+        });
+      });
+      
+      // Close menus when clicking outside
+      document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          // Sidebar menus
+          if (!e.target.closest('.has-submenu')) {
+            hasSubmenus.forEach(item => {
+              item.classList.remove('active');
+              const submenu = item.querySelector('.submenu');
+              submenu.classList.remove('active');
+            });
+          }
+          
+          // Header dropdowns
+          if (!e.target.closest('.header-bar')) {
+            headerNav.classList.remove('active');
+            hasDropdowns.forEach(item => {
+              item.classList.remove('active');
+            });
+          }
+        }
       });
     });
   </script>
