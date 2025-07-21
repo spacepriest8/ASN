@@ -123,23 +123,18 @@ body {
 
 /* Header Bar */
 .header-bar {
-background-color: var(--accent-yellow);
+  background-color: var(--accent-yellow);
   padding: 15px 30px;
   box-shadow: var(--shadow);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* flex-wrap: wrap;
-  position: relative;
-  flex-direction: column; */
-   position: relative;
-  z-index: 90;
+  position: sticky; /* Changed from relative to sticky */
+  top: 0; /* Required for sticky positioning */
+  z-index: 1000; /* Increased from 90 to ensure it stays on top */
   height: 70px;
-  
-
-
+  width: 100%; /* Ensures full width coverage */
 }
-
 .header-title {
   /* color: var(--primary-color);
   font-size: 1.8rem;
@@ -311,12 +306,35 @@ background-color: var(--accent-yellow);
   color:green;
   font-size: 30px;
   margin-bottom: 15px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-family: 'Allura', cursive;
+  font-weight: 400;
+  font-style: italic;
 }
 
-.team-text {
+/* .team-text {
   flex: 1;
   padding: 0 15px;
+} */
+ .team-text {
+  position: relative; /* Needed for the pseudo-element */
+  padding-left: 25px; /* Add space for the line */
+}
+.team-text::before {
+  content: "";
+  position: absolute;
+  left: -10px; /* Position between image and text */
+  top: 0;
+  height: 100%;
+  width: 6px;
+  background: linear-gradient(to bottom, 
+    var(--accent-yellow), 
+    var(--accent-color));
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.team-content-container:hover .team-text::before {
+  width: 6px;
+  background-color: var(--accent-color); /* Change color on hover if desired */
 }
 
 .team-text p {
